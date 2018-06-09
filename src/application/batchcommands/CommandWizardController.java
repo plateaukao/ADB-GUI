@@ -19,9 +19,11 @@ import java.util.ResourceBundle;
  */
 public class CommandWizardController implements Initializable {
     public RadioButton radioButtonInputText;
+    public RadioButton radioButtonInputTouch;
     public RadioButton radioButtonInputTab;
     public RadioButton radioButtonInputEnter;
     public TextField textFieldInputText;
+    public TextField textFieldInputTouch;
     public RadioButton radioButtonInputPower;
     public RadioButton radioButtonInputVolumeUp;
     public RadioButton radioButtonInputVolumeDown;
@@ -79,6 +81,9 @@ public class CommandWizardController implements Initializable {
         if (radioButtonInputText.isSelected()){
             command = "shell input text '" + textFieldInputText.getText() + "'";
             description = "Enter text";
+        } else if (radioButtonInputTouch.isSelected()){
+            command = "shell input tap " + textFieldInputTouch.getText();
+            description = "Touch at position";
         } else if (radioButtonInputTab.isSelected()){
             command = "shell input keyevent KEYCODE_TAB";
             description = "Next field";

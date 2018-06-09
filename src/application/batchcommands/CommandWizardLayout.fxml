@@ -92,6 +92,12 @@
                                         <RadioButton toggleGroup="$toggleGroupSelection" text="Recent"
                                                      fx:id="radioButtonInputRecent"/>
                                     </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="5" GridPane.columnIndex="0"
+                                          GridPane.rowIndex="3">
+                                        <RadioButton toggleGroup="$toggleGroupSelection" text="Input touch position"
+                                                     fx:id="radioButtonInputTouch"/>
+                                        <TextField promptText="Enter position: x y" fx:id="textFieldInputTouch"/>
+                                    </HBox>
                                 </GridPane>
                             </VBox>
                         </content>
